@@ -3,6 +3,9 @@ const app = express();
 const mongoose = require("mongoose");
 const Location = require("./models/location.js");
 const Order = require("./models/order.js");
+const Menu = require("./models/menu.js");
+const Restaurant = require("./models/restaurant.js");
+const MealType = require("./models/mealType.js");
 const path = require("path");
 const MONGO_URL = "mongodb://127.0.0.1:27017/Zomato";
 
@@ -26,7 +29,7 @@ async function main() {
 //list of location
 app.get("/location", async (req, res) => {
   const locations = await Location.find({});
-  res.render("./locations/index.ejs", { locations });
+  res.send(locations);
 });
 
 // list of restaurant with respect to city http://localhost:8080/restaurant?stateId=3 (with queryParams)
