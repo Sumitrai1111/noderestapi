@@ -7,7 +7,7 @@ const Menu = require("./models/menu.js");
 const Restaurant = require("./models/restaurant.js");
 const MealType = require("./models/mealType.js");
 const path = require("path");
-const MONGO_URL = "mongodb://127.0.0.1:27017/Zomato";
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -24,7 +24,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect("mongodb://127.0.0.1:27017/Zomato");
 }
 //list of location
 app.get("/location", async (req, res) => {
