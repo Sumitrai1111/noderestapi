@@ -24,7 +24,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/Zomato");
+  await mongoose.connect("ATLASDB_URL=mongodb+srv://Web-Development:MHFndwrNOn5OugP8@cluster0.2ojznvp.mongodb.net/?retryWrites=true&w=majority");
 }
 //list of location
 app.get("/location", async (req, res) => {
