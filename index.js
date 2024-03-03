@@ -24,7 +24,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect("ATLASDB_URL=mongodb+srv://Web-Development:MHFndwrNOn5OugP8@cluster0.2ojznvp.mongodb.net/?retryWrites=true&w=majority");
+  await mongoose.connect("mongodb+srv://developer111:vQlJ9j6vUbC4tqM5@cluster0.rqfhzo1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 }
 //list of location
 app.get("/location", async (req, res) => {
