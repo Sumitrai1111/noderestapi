@@ -24,7 +24,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect("mongodb+srv://developer111:vQlJ9j6vUbC4tqM5@cluster0.rqfhzo1.mongodb.net/?retryWrites=true");
+  await mongoose.connect("");
 }
 //list of location
 app.get("/location", async (req, res) => {
